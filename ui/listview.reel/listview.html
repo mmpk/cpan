@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="listview.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+        "button": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "button"},
+                "enabled": true,
+                "label": "Button"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "button1": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "button1"},
+                "enabled": true,
+                "label": "Button"
+            },
+            "bindings": {
+                "label": {"<-": "@repetition:iteration.index"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "checkbox": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "checkbox"},
+                "checked": true
+            }
+        },
+        "image": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "image"},
+                "crossOrigin": null,
+                "height": "50",
+                "width": "50"
+            },
+            "bindings": {
+                "src": {"<-": "@list:iteration.object.data.thumbnail || @list:iteration.object.data.url"}
+            }
+        },
+        "list": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "list"},
+                "isSelectionEnabled": true
+            },
+            "bindings": {
+                "contentController.length": {"<-": "@number.value"},
+                "contentController.start": {"<-": "0"}
+            }
+        },
+        "number": {
+            "prototype": "digit/ui/number-field.reel",
+            "properties": {
+                "element": {"#": "number"},
+                "value": 5
+            }
+        },
+        "repetition": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "repetition"},
+                "isSelectionEnabled": true,
+                "selectedIndexes": [
+                    0
+                ]
+            },
+            "bindings": {
+                "content": {"<-": "@list.content.slice(0, @list.content.length / @list.contentController.length)"}
+            }
+        },
+        "text": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "text"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@list:iteration.object.data.title"}
+            }
+        },
+        "textField": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "textField"},
+                "placeholderValue": "search"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Listview">
+        <input data-montage-id="textField" type="text">
+        <button data-montage-id="button">
+
+        </button>
+        <span> per page: </span>
+        <input type="number" data-montage-id="number">
+        <ul data-montage-id="list" id="list">
+            <li>
+                <img data-montage-id="image" class="list_img">
+                <p data-montage-id="text">
+
+                </p>
+                <div style="text-align: right;">
+                    <input type="checkbox" data-montage-id="checkbox">
+                </div>
+            </li>
+        </ul>
+        <div class="mid">
+            <ul data-montage-id="repetition" class="digit-ButtonGroup">
+                <button data-montage-id="button1">
+
+                </button>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -2,15 +2,48 @@
 /* 
  * This file is reserved for your global style rules. 
  */
-
 html {
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
-    color: #333;
-    
+    color: #333; 
+    height: 100%;
     /* Prevent iOS text size adjust after orientation change, without disabling user zoom. */
     -webkit-text-size-adjust: 100%;
 }
-
 body {
-    margin: 0; /* Remove default margin */
+    margin: 0;
+    padding: 0;
+    color: green;
+    height: 100%;
+}
+
+.content {
+    height:auto !important;
+    height:100%;
+    min-height:100%;
+    position:relative;
+    margin: 0;
+    padding: 0;
+}
+.empty {
+    height:100px; /* равняется высоте футера */
+}
+footer {
+    height:100px;
+    margin-top:-100px;
+    position:relative;
+    text-align: center;
+}
+footer div {
+    font-size: 300%;
+    border-top: 1px solid;
+}
+footer div > i:hover {
+    -webkit-animation:spin 3s linear infinite; 
+}
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+
+div .mid {
+    text-align: center;
 }

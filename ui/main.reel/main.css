@@ -1,1 +1,92 @@
-.Main {}
+.Main {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: table;   
+    border-bottom: 1px solid;
+    margin: 0;
+    padding: 0 12px;
+    height: 60px;
+}
+header > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header ul {
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    height: 100%;
+}
+header ul > li {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: pointer;
+    height: 57px;
+    padding: 0 12px;
+}
+header ul > li:hover {
+    font-weight: bold;
+    border-bottom: 3px solid;
+}
+header #logo {
+
+}
+
+.wrap {
+    width: 100%;
+    text-align: right;
+}
+
+@media (min-width: 700px) { 
+    .nav_btn { 
+       display: none;
+    } 
+}
+
+@media (max-width: 700px) { 
+
+    header ul {
+        display: none;
+    }
+    header ul.expanded {
+        position: absolute;
+        z-index: 10;
+        top: 60px;
+        left: 0;
+        display: block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        
+        -webkit-animation-timing-function: linear;
+        -webkit-animation: shownavonsmall 0.5s;
+        -webkit-animation-fill-mode: forwards;
+        -webkit-animation-iteration-count: 1; 
+        
+    }
+    header ul > li {
+        display: block;
+        margin: 5px;
+        padding: 0.7em;
+        text-align: center;
+        height: auto;
+        border: 1px solid;
+        border-radius: 1.25em;
+        background: #fff;
+    }
+    header ul > li:hover {
+        font-weight: bold;
+    }
+    
+}
+
+@-webkit-keyframes shownavonsmall {
+    from {font-size: 100%; opacity: 0.1;}
+    to {font-size: 150%; opacity: 1}
+}
