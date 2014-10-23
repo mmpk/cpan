@@ -50,6 +50,9 @@
             "prototype": "digit/ui/toggle-switch.reel",
             "properties": {
                 "element": {"#": "button2"}
+            },
+            "bindings": {
+                "checked": {"<-": "@list:iteration.object.data.checked"}
             }
         },
         "checkbox": {
@@ -161,6 +164,7 @@
                 </p>
                 <div style="text-align: right;">
                     <input type="checkbox" data-montage-id="checkbox">
+                    <span> one way binding -> </span>
                     <button data-montage-id="button2"></button>
                 </div>
             </li>
