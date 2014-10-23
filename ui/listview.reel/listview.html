@@ -17,6 +17,9 @@
                 "enabled": true,
                 "label": "Button"
             },
+            "_dev": {
+                "isHidden": true
+            },
             "listeners": [
                 {
                     "type": "action",
@@ -43,11 +46,20 @@
                 }
             ]
         },
+        "button2": {
+            "prototype": "digit/ui/toggle-switch.reel",
+            "properties": {
+                "element": {"#": "button2"}
+            }
+        },
         "checkbox": {
             "prototype": "digit/ui/checkbox.reel",
             "properties": {
                 "element": {"#": "checkbox"},
                 "checked": true
+            },
+            "bindings": {
+                "checked": {"<->": "@list:iteration.object.data.checked"}
             }
         },
         "image": {
@@ -80,6 +92,21 @@
                 "value": 5
             }
         },
+        "removeBtn": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "removeBtn"},
+                "enabled": true,
+                "label": "Delete checked"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
         "repetition": {
             "prototype": "montage/ui/repetition.reel",
             "properties": {
@@ -108,6 +135,9 @@
             "properties": {
                 "element": {"#": "textField"},
                 "placeholderValue": "search"
+            },
+            "_dev": {
+                "isHidden": true
             }
         }
     }
@@ -119,7 +149,9 @@
         <button data-montage-id="button">
 
         </button>
-        <span> per page: </span>
+        <span>
+            per page:
+        </span>
         <input type="number" data-montage-id="number">
         <ul data-montage-id="list" id="list">
             <li>
@@ -129,9 +161,13 @@
                 </p>
                 <div style="text-align: right;">
                     <input type="checkbox" data-montage-id="checkbox">
+                    <button data-montage-id="button2"></button>
                 </div>
             </li>
         </ul>
+        <button data-montage-id="removeBtn">
+
+        </button>
         <div class="mid">
             <ul data-montage-id="repetition" class="digit-ButtonGroup">
                 <button data-montage-id="button1">

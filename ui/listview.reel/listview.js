@@ -43,6 +43,16 @@ exports.Listview = Component.specialize(/** @lends Listview# */ {
                     })             
             }
         }
+    },
+
+    handleRemoveBtnAction: {
+        value: function (event) {
+            var list = this.templateObjects.list;
+            var toRemove = list.contentController.getPath("content.filter{data.checked}");
+            //console.log(list.content)
+            console.log(toRemove)
+            list.contentController.deleteEach(toRemove);
+        }
     }
 
 });
