@@ -1,0 +1,63 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8" />
+    <title>
+        Main
+    </title>
+    <link rel="stylesheet" href="main.css" />
+    <script type="text/montage-serialization">{"owner":{"properties":{"element":{"#":"main"}}},"actionEventListener":{"prototype":"montage/core/event/action-event-listener","properties":{"action":"show","handler":{"@":"overlay"}},"_dev":{"isHidden":true}},"button":{"prototype":"digit/ui/button.reel","properties":{"element":{"#":"button"},"enabled":true,"label":"Login "},"listeners":[{"type":"action","useCapture":false,"listener":{"@":"actionEventListener"}}]},"button2":{"prototype":"digit/ui/button.reel","properties":{"element":{"#":"button2"},"enabled":true,"label":"Sign up"}},"button3":{"prototype":"digit/ui/button.reel","properties":{"element":{"#":"button3"},"enabled":true,"label":""},"listeners":[{"type":"action","useCapture":false,"listener":{"@":"owner"}}]},"listview":{"prototype":"ui/listview.reel","properties":{"element":{"#":"listview"}}},"loginForm":{"prototype":"ui/login-form.reel","properties":{"element":{"#":"loginForm"}}},"overlay":{"prototype":"montage/ui/overlay.reel","properties":{"element":{"#":"overlay"}}}}</script>
+</head>
+<body>
+    <div data-montage-id="main" data-montage-skin="wireframeX" class="Main">
+        <div data-montage-id="overlay">
+            <div data-montage-id="loginForm"></div>
+        </div>
+        <div class="content">  
+        <header>
+            <div>
+                <i class="fa fa-cube fa-3x"></i>
+            </div>
+            <h3 id="logo">
+                Sitename
+            </h3>
+            <ul>
+                <li>
+                    Home
+                </li>
+                <li>
+                    About
+                </li>
+                <li>
+                    Product
+                </li>
+                <li>
+                    Price
+                </li>
+            </ul>
+            <div class="wrap">
+                <button data-montage-id="button">
+                    <i class="fa fa-sign-in"></i>
+                </button>
+                <button data-montage-id="button2"></button>
+   
+                <button data-montage-id="button3" class="nav_btn">
+                    <i class="fa fa-th"></i>
+                </button>
+            </div>
+        </header>
+        
+
+            <div data-montage-id="listview"></div>
+            <div class="empty"></div>
+        </div>
+
+        <footer>
+            <div>
+                <i class="fa fa-copyright"></i>
+                <i class="fa fa-trophy"></i>
+                <i class="fa fa-twitter"></i>
+            </div>
+        </footer>
+        
+    </div>
+
+</body></html>

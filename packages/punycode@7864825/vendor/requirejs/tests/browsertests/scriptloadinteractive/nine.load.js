@@ -1,0 +1,1 @@
+montageDefine("7864825","vendor/requirejs/tests/browsertests/scriptloadinteractive/nine",{dependencies:[],factory:function(){def(function(){return{name:"nine"}})}});

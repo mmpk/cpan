@@ -1,0 +1,1 @@
+montageDefine("7864825","vendor/requirejs/tests/browsertests/scriptload/six",{dependencies:[],factory:function(){log("six.js script")}});

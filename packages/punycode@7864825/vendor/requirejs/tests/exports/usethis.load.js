@@ -1,0 +1,1 @@
+montageDefine("7864825","vendor/requirejs/tests/exports/usethis",{dependencies:[],factory:function(){define(function(){this.name="usethis"})}});

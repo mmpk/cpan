@@ -1,0 +1,1 @@
+montageDefine("7864825","vendor/requirejs/tests/version2/epsilon",{dependencies:[],factory:function(){epsilon={color:"red"}}});

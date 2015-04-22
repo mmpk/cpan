@@ -1,0 +1,1 @@
+montageDefine("7864825","vendor/requirejs/tests/jquery/scripts/jquery.alpha",{dependencies:[],factory:function(){$.fn.alpha=function(){return"alpha"}}});

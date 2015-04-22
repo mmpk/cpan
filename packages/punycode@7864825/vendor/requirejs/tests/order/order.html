@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head>
+    <title>require.js: Order Plugin Test</title>
+    <script src=../../require.js></script>
+    <script src=../doh/runner.js></script>
+    <script src=../doh/_browserRunner.js></script>
+    <script>require({baseUrl:"./",paths:{order:"../../order"}},["require","order!one.js","order!two","order!three.js","order!bar.js"],function(){var e=one.name,i=two.name,t=three.name;doh.register("order",[function(a){a.is("one",e),a.is("one",two.oneName),a.is("two",i),a.is("two",three.twoName),a.is("three",t),a.is(1,bar)}]),doh.run()});</script>
+</head>
+<body>
+    <h1>require.js: Order Plugin Test</h1>
+    <p>To properly test, clear cache in the browser.</p>
+    <p>Check console for messages</p>
+
+
+</body></html>

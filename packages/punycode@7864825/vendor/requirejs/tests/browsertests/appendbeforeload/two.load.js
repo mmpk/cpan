@@ -1,0 +1,1 @@
+montageDefine("7864825","vendor/requirejs/tests/browsertests/appendbeforeload/two",{dependencies:[],factory:function(){console.log("TWO")}});

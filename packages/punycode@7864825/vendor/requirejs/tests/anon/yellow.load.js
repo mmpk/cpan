@@ -1,0 +1,1 @@
+montageDefine("7864825","vendor/requirejs/tests/anon/yellow",{dependencies:[],factory:function(){define("yellow",{name:"yellow"})}});

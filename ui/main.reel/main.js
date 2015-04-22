@@ -1,0 +1,1 @@
+var Component=require("montage/ui/component").Component;exports.Main=Component.specialize({constructor:{value:function(){this.super()}},enterDocument:{value:function(){window.addEventListener("resize",function(){})}},handleButton3Action:{value:function(){console.log("TOGGLE");var e=document.querySelectorAll("header > ul")[0];e.classList.toggle("expanded")}}});
